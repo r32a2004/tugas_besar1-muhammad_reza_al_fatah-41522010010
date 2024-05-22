@@ -42,12 +42,16 @@ public class scan_ktp extends AppCompatActivity {
                     Intent data = result.getData();
                     if (data != null && data.hasExtra("intentData")) {
                         String intentData = data.getStringExtra("intentData");
-                        Bitmap barcodeImage = data.getParcelableExtra("barcodeImage");
+                        int counterValue = getIntent().getIntExtra("counter_value", 0);
+                        // Uncomment the following line if you want to pass a Bitmap as well
+                        // Bitmap barcodeImage = data.getParcelableExtra("barcodeImage");
 
                         // Menampilkan hasil pemindaian dan gambar QR code
                         Intent displayIntent = new Intent(scan_ktp.this, DisplayImageActivity.class);
                         displayIntent.putExtra("intentData", intentData);
-                        displayIntent.putExtra("barcodeImage", barcodeImage);
+                        // Uncomment the following line if you are passing a Bitmap as well
+                        // displayIntent.putExtra("barcodeImage", barcodeImage);
+                        displayIntent.putExtra("counter_value", counterValue);
                         startActivity(displayIntent);
                     }
                 }

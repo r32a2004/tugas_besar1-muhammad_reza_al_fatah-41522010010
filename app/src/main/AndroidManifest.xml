@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -18,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasBesar1Mobile"
         tools:targetApi="31">
+        <activity
+            android:name=".proses_scane_ktp"
+            android:exported="false" />
         <activity
             android:name=".win_popup_royal"
             android:exported="false" />
@@ -84,11 +89,14 @@
             <meta-data
                 android:name="com.google.firebase.messaging.default_notification_icon"
                 android:resource="@drawable/aqua" />
-            <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
-                 notification message. See README(https://goo.gl/6BKBk7) for more. -->
+            <!--
+                 Set color used with incoming notification messages. This is used when no color is set for the incoming
+                 notification message. See README(https://goo.gl/6BKBk7) for more.
+            -->
             <meta-data
                 android:name="com.google.firebase.messaging.default_notification_color"
                 android:resource="@color/black" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,30 +1,31 @@
 package com.example.tugasbesar1mobile;
 
-
-import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import androidx.core.app.ActivityCompat;
-
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+
 import java.io.IOException;
 
-public class ScannedBarcodeActivity extends AppCompatActivity {
-
+public class proses_scane_ktp extends AppCompatActivity {
 
     SurfaceView surfaceView;
     TextView txtBarcodeValue;
@@ -38,7 +39,7 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scanned_barcode);
+        setContentView(R.layout.activity_proses_scane_ktp);
         initViews();
     }
 
@@ -48,6 +49,7 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
         surfaceView = findViewById(R.id.surfaceView);
 
     }
+
     private void initialiseDetectorsAndSources() {
         Toast.makeText(getApplicationContext(), "Camera is on", Toast.LENGTH_SHORT).show();
         barcodeDetector = new BarcodeDetector.Builder(this)
@@ -63,10 +65,10 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
                 try {
-                    if (ActivityCompat.checkSelfPermission(ScannedBarcodeActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(proses_scane_ktp.this, android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                         cameraSource.start(surfaceView.getHolder());
                     } else {
-                        ActivityCompat.requestPermissions(ScannedBarcodeActivity.this, new
+                        ActivityCompat.requestPermissions(proses_scane_ktp.this, new
                                 String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
                     }
 
@@ -111,7 +113,6 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
 
                             setResult(Activity.RESULT_OK, resultIntent);
                             finish();
-
 
 
                         }
