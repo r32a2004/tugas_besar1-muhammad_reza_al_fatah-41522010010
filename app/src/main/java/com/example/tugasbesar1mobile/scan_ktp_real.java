@@ -50,7 +50,7 @@ public class scan_ktp_real extends AppCompatActivity {
                     Intent data = result.getData();
                     if (data != null && data.hasExtra("intentData")) {
                         String intentData = data.getStringExtra("intentData");
-                        int counterValue = getIntent().getIntExtra("counter_value", 0);
+                        int counterValue = data.getIntExtra("counter_value", 0);
                         // Uncomment the following line if you want to pass a Bitmap as well
                         // Bitmap barcodeImage = data.getParcelableExtra("barcodeImage");
 
@@ -59,7 +59,7 @@ public class scan_ktp_real extends AppCompatActivity {
                         displayIntent.putExtra("intentData", intentData);
                         // Uncomment the following line if you are passing a Bitmap as well
                         // displayIntent.putExtra("barcodeImage", barcodeImage);
-                        displayIntent.putExtra("counter_value", counterValue);
+                        displayIntent.putExtra("counter_value", 90);
                         startActivity(displayIntent);
 
 

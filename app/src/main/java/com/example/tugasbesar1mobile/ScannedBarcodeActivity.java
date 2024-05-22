@@ -102,14 +102,18 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
                             intentData = barcodes.valueAt(0).displayValue;
                             txtBarcodeValue.setText(intentData);
                             counter++;
-                            tvCounter.setText("Counter: " + counter);
+
                             // Pass intentData back to MainActivity
                             Intent resultIntent = new Intent();
-                            resultIntent.putExtra("intentData", intentData);
-                            resultIntent.putExtra("counter_value", counter);
 
+                            resultIntent.putExtra("counter_value", counter);
+                            resultIntent.putExtra("intentData", intentData);
+                            tvCounter.setText(" " + counter);
                             setResult(Activity.RESULT_OK, resultIntent);
                             finish();
+
+
+
                         }
                     });
                 }
