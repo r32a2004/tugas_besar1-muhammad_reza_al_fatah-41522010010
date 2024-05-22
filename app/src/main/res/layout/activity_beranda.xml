@@ -39,7 +39,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
-                    tools:layout_editor_absoluteX="1dp" />
+                    tools:layout_editor_absoluteX="0dp" />
 
                 <View
                     android:id="@+id/view3"
@@ -79,6 +79,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/vector_beranda1" />
 
+
+
                 <ImageButton
                     android:id="@+id/hamburger"
 
@@ -109,6 +111,19 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.462"
                     app:srcCompat="@drawable/foto_beranda" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/hamburger"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.952" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -155,9 +170,10 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="220dp"
+                    android:layout_marginTop="40dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/view3">
 
@@ -180,8 +196,10 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="5dp"
                             android:layout_weight="1"
+                            android:background="@drawable/frame2"
+                            android:clickable="true"
 
-                            android:background="@drawable/frame2" />
+                            android:onClick="halamanscan" />
 
                         <View
                             android:id="@+id/view8"
@@ -192,17 +210,41 @@
                     </LinearLayout>
                 </HorizontalScrollView>
 
+                <ImageView
+                    android:id="@+id/imageView57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+                    app:srcCompat="@drawable/raisa_real" />
+
+                <TextView
+                    android:id="@+id/poin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#101010"
+                    android:textSize="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.695"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view6"
+                    app:layout_constraintVertical_bias="0.307" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <ImageView
-                android:id="@+id/imageView13"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/raisa" />
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
                 android:layout_height="match_parent">
 
                 <TextView
@@ -219,319 +261,467 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
 
-                android:layout_width="wrap_content"
+            <!--            <LinearLayout-->
+
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="15dp"-->
+            <!--                android:layout_marginRight="5dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginRight="20dp"-->
+            <!--                    android:background="@drawable/traveloka">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:padding="20dp">-->
+
+            <!--                        <TextView-->
+            <!--                            android:id="@+id/textView17"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/medium"-->
+            <!--                            android:text="DIskon 70% Hotel"-->
+            <!--                            android:textColor="#4D4D4D" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:id="@+id/textView18"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/bold"-->
+            <!--                            android:text="200 Tutup Botol"-->
+            <!--                            android:textColor="#4D4D4D" />-->
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:background="@drawable/register1"-->
+
+            <!--                            android:orientation="horizontal"-->
+            <!--                            android:padding="5dp">-->
+
+            <!--                            <ImageButton-->
+            <!--                                android:id="@+id/imageButton3"-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_weight="1"-->
+
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="5dp"-->
+            <!--                                app:srcCompat="@drawable/tambah_background" />-->
+
+            <!--                            <TextView-->
+            <!--                                android:id="@+id/textView19"-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginLeft="3dp"-->
+            <!--                                android:layout_marginRight="3dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:text="1"-->
+            <!--                                android:textColor="#FFFFFF" />-->
+
+            <!--                            <ImageButton-->
+            <!--                                android:id="@+id/imageButton4"-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginTop="2dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="9dp"-->
+            <!--                                app:srcCompat="@drawable/min" />-->
+
+            <!--                        </LinearLayout>-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                </RelativeLayout>-->
+
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:background="@drawable/shopee">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:padding="20dp">-->
+
+            <!--                        <TextView-->
+
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/medium"-->
+            <!--                            android:text="Cashback ShopeePay"-->
+            <!--                            android:textColor="#4D4D4D"-->
+            <!--                            android:textSize="12sp" />-->
+
+            <!--                        <TextView-->
+
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/bold"-->
+            <!--                            android:text="200 Tutup Botol"-->
+            <!--                            android:textColor="#4D4D4D" />-->
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:background="@drawable/register1"-->
+
+            <!--                            android:orientation="horizontal"-->
+            <!--                            android:padding="5dp">-->
+
+            <!--                            <ImageButton-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_weight="1"-->
+
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="5dp"-->
+            <!--                                app:srcCompat="@drawable/tambah_background" />-->
+
+            <!--                            <TextView-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginLeft="3dp"-->
+            <!--                                android:layout_marginRight="3dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:text="1"-->
+            <!--                                android:textColor="#FFFFFF" />-->
+
+            <!--                            <ImageButton-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginTop="2dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="9dp"-->
+            <!--                                app:srcCompat="@drawable/min" />-->
+
+            <!--                        </LinearLayout>-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                </RelativeLayout>-->
+
+            <!--            </LinearLayout>-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_marginLeft="15dp"-->
+            <!--                android:layout_marginRight="5dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginRight="20dp"-->
+            <!--                    android:background="@drawable/food">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:padding="20dp">-->
+
+            <!--                        <TextView-->
+
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/medium"-->
+            <!--                            android:text="Food Voucher 35%"-->
+            <!--                            android:textColor="#4D4D4D" />-->
+
+            <!--                        <TextView-->
+
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/bold"-->
+            <!--                            android:text="100 Tutup Botol"-->
+            <!--                            android:textColor="#4D4D4D" />-->
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:background="@drawable/register1"-->
+
+            <!--                            android:orientation="horizontal"-->
+            <!--                            android:padding="5dp">-->
+
+            <!--                            <ImageButton-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_weight="1"-->
+
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="5dp"-->
+            <!--                                app:srcCompat="@drawable/tambah_background" />-->
+
+            <!--                            <TextView-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginLeft="3dp"-->
+            <!--                                android:layout_marginRight="3dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:text="1"-->
+            <!--                                android:textColor="#FFFFFF" />-->
+
+            <!--                            <ImageButton-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginTop="2dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="9dp"-->
+            <!--                                app:srcCompat="@drawable/min" />-->
+
+            <!--                        </LinearLayout>-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                </RelativeLayout>-->
+
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginRight="20dp"-->
+            <!--                    android:background="@drawable/gofood">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:padding="20dp">-->
+
+            <!--                        <TextView-->
+
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/medium"-->
+            <!--                            android:text=" Voucher GoFood"-->
+            <!--                            android:textColor="#4D4D4D"-->
+            <!--                            android:textSize="14sp" />-->
+
+            <!--                        <TextView-->
+
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:fontFamily="@font/bold"-->
+            <!--                            android:text="100 Tutup Botol"-->
+            <!--                            android:textColor="#4D4D4D" />-->
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="match_parent"-->
+            <!--                            android:background="@drawable/register1"-->
+
+            <!--                            android:orientation="horizontal"-->
+            <!--                            android:padding="5dp">-->
+
+            <!--                            <ImageButton-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_weight="1"-->
+
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="5dp"-->
+            <!--                                app:srcCompat="@drawable/tambah_background" />-->
+
+            <!--                            <TextView-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginLeft="3dp"-->
+            <!--                                android:layout_marginRight="3dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:text="1"-->
+            <!--                                android:textColor="#FFFFFF" />-->
+
+            <!--                            <ImageButton-->
+
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:layout_marginTop="2dp"-->
+            <!--                                android:layout_weight="1"-->
+            <!--                                android:background="@drawable/tambah"-->
+            <!--                                android:padding="9dp"-->
+            <!--                                app:srcCompat="@drawable/min" />-->
+
+            <!--                        </LinearLayout>-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                </RelativeLayout>-->
+
+            <!--            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/card_beranda_vaganza"
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp"
+                android:onClick="go_redem"
+
+
+                android:paddingLeft="20dp"
+                android:paddingVertical="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+
+                        android:layout_width="32dp"
+                        android:layout_height="39dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/gift" />
+
+                    <ImageView
+
+                        android:id="@+id/imageView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.381"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.271"
+                        app:srcCompat="@drawable/redem" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Penguna Aplikasi bisa melakukan penukaran \n mandiri atau mendapatkan hadiah"
+                    android:textColor="#1A529D" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:onClick="go_extra"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/card_beranda_vaganza"
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp"
+
+                android:paddingLeft="20dp"
+                android:paddingVertical="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+
+                        android:layout_width="32dp"
+                        android:layout_height="51dp"
+                        app:srcCompat="@drawable/gift" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.32"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.407"
+                        app:srcCompat="@drawable/extra" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Penguna Aplikasi dapat memenangkan \n undian seacara regular"
+                    android:textColor="#1A529D" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/card_beranda_vaganza"
+                android:orientation="vertical"
+                android:onClick="royal"
+                android:layout_marginBottom="30dp"
+
+                android:paddingLeft="20dp"
+                android:paddingVertical="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView25"
+                        android:layout_width="39dp"
+                        android:layout_height="51dp"
+                        app:srcCompat="@drawable/gift" />
+
+                    <ImageView
+                        android:id="@+id/imageView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.381"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.271"
+                        app:srcCompat="@drawable/royal" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Penguna Aplikasi dapat memenangkan  \n undian hadiah secara regular"
+                    android:textColor="#1A529D" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/traveloka">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <TextView
-                            android:id="@+id/textView17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:text="DIskon 70% Hotel"
-                            android:textColor="#4D4D4D" />
-
-                        <TextView
-                            android:id="@+id/textView18"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bold"
-                            android:text="200 Tutup Botol"
-                            android:textColor="#4D4D4D" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/register1"
-
-                            android:orientation="horizontal"
-                            android:padding="5dp">
-
-                            <ImageButton
-                                android:id="@+id/imageButton3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-
-                                android:background="@drawable/tambah"
-                                android:padding="5dp"
-                                app:srcCompat="@drawable/tambah_background" />
-
-                            <TextView
-                                android:id="@+id/textView19"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="3dp"
-                                android:layout_marginRight="3dp"
-                                android:layout_weight="1"
-                                android:text="1"
-                                android:textColor="#FFFFFF" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:layout_weight="1"
-                                android:background="@drawable/tambah"
-                                android:padding="9dp"
-                                app:srcCompat="@drawable/min" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shopee">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:text="Cashback ShopeePay"
-                            android:textColor="#4D4D4D"
-                            android:textSize="12sp" />
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bold"
-                            android:text="200 Tutup Botol"
-                            android:textColor="#4D4D4D" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/register1"
-
-                            android:orientation="horizontal"
-                            android:padding="5dp">
-
-                            <ImageButton
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-
-                                android:background="@drawable/tambah"
-                                android:padding="5dp"
-                                app:srcCompat="@drawable/tambah_background" />
-
-                            <TextView
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="3dp"
-                                android:layout_marginRight="3dp"
-                                android:layout_weight="1"
-                                android:text="1"
-                                android:textColor="#FFFFFF" />
-
-                            <ImageButton
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:layout_weight="1"
-                                android:background="@drawable/tambah"
-                                android:padding="9dp"
-                                app:srcCompat="@drawable/min" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/food">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:text="Food Voucher 35%"
-                            android:textColor="#4D4D4D" />
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bold"
-                            android:text="100 Tutup Botol"
-                            android:textColor="#4D4D4D" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/register1"
-
-                            android:orientation="horizontal"
-                            android:padding="5dp">
-
-                            <ImageButton
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-
-                                android:background="@drawable/tambah"
-                                android:padding="5dp"
-                                app:srcCompat="@drawable/tambah_background" />
-
-                            <TextView
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="3dp"
-                                android:layout_marginRight="3dp"
-                                android:layout_weight="1"
-                                android:text="1"
-                                android:textColor="#FFFFFF" />
-
-                            <ImageButton
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:layout_weight="1"
-                                android:background="@drawable/tambah"
-                                android:padding="9dp"
-                                app:srcCompat="@drawable/min" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/gofood">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/medium"
-                            android:text=" Voucher GoFood"
-                            android:textColor="#4D4D4D"
-                            android:textSize="14sp" />
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bold"
-                            android:text="100 Tutup Botol"
-                            android:textColor="#4D4D4D" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/register1"
-
-                            android:orientation="horizontal"
-                            android:padding="5dp">
-
-                            <ImageButton
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-
-                                android:background="@drawable/tambah"
-                                android:padding="5dp"
-                                app:srcCompat="@drawable/tambah_background" />
-
-                            <TextView
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="3dp"
-                                android:layout_marginRight="3dp"
-                                android:layout_weight="1"
-                                android:text="1"
-                                android:textColor="#FFFFFF" />
-
-                            <ImageButton
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp"
-                                android:layout_weight="1"
-                                android:background="@drawable/tambah"
-                                android:padding="9dp"
-                                app:srcCompat="@drawable/min" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:background="@drawable/footer_beranda"
-                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -683,12 +873,12 @@
 
         </LinearLayout>
     </ScrollView>
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
 
 
-        app:menu="@menu/menu" />
+            app:menu="@menu/menu" />
 </androidx.drawerlayout.widget.DrawerLayout>

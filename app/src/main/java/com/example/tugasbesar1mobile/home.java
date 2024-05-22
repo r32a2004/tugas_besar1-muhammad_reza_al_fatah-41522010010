@@ -1,6 +1,7 @@
 package com.example.tugasbesar1mobile;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 
@@ -28,4 +29,29 @@ public class home extends AppCompatActivity {
         startActivity(intent );
 
     }
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Cek apakah orientasi layar berubah menjadi landscape
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // Memuat layout landscape
+            setContentView(R.layout.activity_home_land);
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            // Memuat layout portrait
+            setContentView(R.layout.activity_home);
+        }
+    }
+    protected void onResume() {
+        super.onResume();
+
+        Configuration newConfig = getResources().getConfiguration();
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // Memuat layout landscape
+            setContentView(R.layout.activity_home_land);
+        } else {
+            // Memuat layout portrait
+            setContentView(R.layout.activity_home);
+        }
+
+    }
+
 }

@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.androidApplication)
+    id ("com.android.application")
 }
 
 android {
@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.tugasbesar1mobile"
-        minSdk = 32
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -40,4 +40,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation ("com.google.android.material:material:1.11.0")
+    implementation ("com.google.zxing:core:3.4.1")
+
+    implementation ("com.google.android.gms:play-services-vision:20.1.3")
+
+    implementation ("com.airbnb.android:lottie:6.0.1")
 }

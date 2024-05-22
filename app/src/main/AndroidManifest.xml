@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +19,49 @@
         android:theme="@style/Theme.TugasBesar1Mobile"
         tools:targetApi="31">
         <activity
-            android:name=".cona"
+            android:name=".win_popup_royal"
+            android:exported="false" />
+        <activity
+            android:name=".redem_royal_vaganza"
+            android:exported="false" />
+        <activity
+            android:name=".reesult_scan_ktp"
+            android:exported="false" />
+        <activity
+            android:name=".scan_ktp_real"
+            android:exported="false" />
+        <activity
+            android:name=".win_popup"
+            android:exported="false" />
+        <activity
+            android:name=".spin_well_bulanan"
+            android:exported="false" />
+        <activity
+            android:name=".undian_extra_veganza"
+            android:exported="false" />
+        <activity
+            android:name=".traveloka"
+            android:exported="false" />
+        <activity
+            android:name=".redem"
+            android:exported="false" />
+        <activity
+            android:name=".ScannedBarcodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".hasil_aqua_gagal"
+            android:exported="false" />
+        <activity
+            android:name=".scan_aqua_berhasil"
+            android:exported="false" />
+        <activity
+            android:name=".hasil_sccan_aqua"
+            android:exported="false" />
+        <activity
+            android:name=".scan_ktp"
             android:exported="false" />
         <activity
             android:name=".beranda"
@@ -23,13 +71,24 @@
             android:exported="false" />
         <activity
             android:name=".login"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".auth"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".home"
+            android:configChanges="orientation|screenSize"
             android:exported="true">
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/aqua" />
+            <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+                 notification message. See README(https://goo.gl/6BKBk7) for more. -->
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/black" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
